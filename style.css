@@ -76,10 +76,72 @@ nav {
 
 .products {
     width: 100%;
-    height: 100vh;
-    background-color: #708090;
+    min-height: 100vh;
+    background-color: #d8dcdf;
 }
 
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 50px;
+    gap: 20px;
+    font-family: 'Montserrat' , sans-serif;
+}
+
+.card {
+    width: 200px;
+    height: 100%;
+    background-color: #f0f2f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    overflow: hidden;
+    padding-bottom: 5px;
+}
+
+.pr-img {
+    overflow: hidden;
+}
+
+.card img {
+    width: 200px;
+    transition: .3s ease;
+}
+
+.card img:hover {
+    transform: scale(1.4);
+}
+
+.card h3 {
+    color: #1f2d3d;
+    font-size: 1rem;
+    max-width: 100%;
+    white-space: nowrap;       
+    overflow: hidden;           
+    text-overflow: ellipsis;    
+}
+
+.card p {
+    color: #5d7fa3;
+}
+
+.card a {
+    background: linear-gradient(to right, #e84c4c, #f6d6d6, #f1e4d6);
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #000;
+    border-radius: 3px;
+    font-weight: 400;
+}
+
+.card a:hover {
+    background: transparent;
+    border: solid 1px #e84c4c;
+}
 
 
 
@@ -181,5 +243,90 @@ nav {
     }
     .image img {
     width: 400px;
+    }
+    .cards {
+        padding: 30px 0px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .card {
+        width: 180px;
+        height: 100%;
+    }
+    .card img {
+        transition: .3s ease;
+        width: 180px;
+    }
+    .card a {
+        padding: 5px 10px;
+    }
+    .card h3 {
+        font-size: 1rem;
+    }
+    .card p {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .card {
+        width: 160px;
+        height: 100%;
+    }
+    .card img {
+        transition: .3s ease;
+        width: 160px;
+    }
+    .card p {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .cards {
+        padding: 10px 0px;
+    }
+    .card a {
+        padding: 5px 10px;
+    }
+    .card h3 {
+        font-size: 1rem;
+    }
+    .card p {
+        font-size: 0.8rem;
+    }
+     .card h4 {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .image img {
+        width: 300px;
+    }
+    .card h4 {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .card {
+        width: 140px;
+        height: 100%;
+    }
+    .card img {
+        transition: .3s ease;
+        width: 140px;
+    }
+    .card a {
+        padding: 2.5px 5px;
+        font-size: 0.9rem;
+    }
+    .card p {
+        font-size: 0.7rem;
+    }
+     .card h4 {
+        font-size: 0.7rem;
     }
 }
